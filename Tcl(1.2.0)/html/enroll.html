@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/enroll.css"/>
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="../js/tool.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				if(getCookie("username")){
+					alert("使用cookie缓存进行登录");
+						setTimeout(function(){
+							window.location.href='../index.html';
+					},2000)
+				}
+				$("#div_code").innerHTML = testCode(4);
+					$("#div_code").onclick = function(){
+						$("#div_code").innerHTML = testCode(4);
+				
+						}
+						
+
+				$('#username').onblur = function(){
+					var oValue = this.value.replace(/ /g,'');
+					this.value = oValue;
+					if(oValue.length == 11){
+						if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(oValue))){
+							$('#username_span').innerHTML = '✘';
+							$('#username_span').style.color = 'red';
+						}else{
+							$('#username_span').innerHTML = '✔';
+							$('#username_span').style.color = 'green';
+						}
+					}else{
+						$('#username_span').style.color = 'red';
+						$('#username_span').innerHTML = '✘';
+					}
+				}
+				$("#password").onblur = function(){
+					if(this.value.length >= 6 && this.value.length <= 18){
+						$("#password_span").style.color = "green";
+						if(/\d/.test(this.value) && /[a-z]/.test(this.value) && /[A-Z]/.test(this.value)){
+							$("#password_span").innerHTML = "【强】";
+						}else if(/^\d+$/.test(this.value) || /^[a-z]+$/.test(this.value) || /^[A-Z]+$/.test(this.value)){
+							$("#password_span").innerHTML = "【弱】";
+						}else{
+							$("#password_span").innerHTML = "【一般】";
+						}
+					}else{
+						$("#password_span").style.color = "red";
+						$("#password_span").innerHTML = "长度6~18位";
+					}
+				}
+				$('#input_code').onblur = function(){
+					if(!($('#input_code').value == $("#div_code").innerHTML) ){
+						$('#input_span').innerHTML = '✘';
+						$('#input_span').style.color = 'red';
+					}else{
+						$('#input_span').innerHTML = '✔';
+						$('#input_span').style.color = 'green';
+					}
+				}
+				$('#btn').onclick = function(){
+					//alert(1)
+					var val1 = $('#username').value,
+						val2 = $('#password').value;
+						if(!(val1 !=''&&val2 !='')){
+							alert('输入有误')
+						}else{
+							alert('注册完成,请登录')
+							 setTimeout(function(){
+							window.location.href='login.html';
+							},2000)
+					setCookie('username',val1,getDate(5));
+					setCookie('password',val2,getDate(5));
+						}
+						
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top_one">
+				<div class="top_1"><img src="../images/0_1.jpg"/></div>
+				<div class="top_2">TCL账号注册</div>
+			</div>
+		</div>
+		<!--------------------------------------中部------------------------------------->
+		<div class="middle">
+			<div class="middle_one">
+				<form action="" method="get">
+					<input type="text" name="" id="username" placeholder="手机号/TCl/账号"/><span id="username_span"></span><br>
+					
+					<input type="password" name="" id="password" placeholder="密码"/><span id="password_span"></span><br>
+					
+					<input type="text" name="" id="input_code" placeholder="验证码"/><span id="input_span"></span><br>
+					
+					<input type="checkbox" name="read" id="read">
+                	<span id="ch_box">我已阅读<a href="#">用户须知</a>,服务条款和隐私政策</span>
+                	
+					<input type="button" name="" id="btn" value="立即注册"/>
+				</form>
+				<div class="oImg"><img src="../images/TCL_01.jpg"/></div>
+				<div class="oImg2"><img src="../images/yzm.jpg"/></div>
+				<div class="oImg1"><img src="../images/TCL_02.jpg"/></div>
+				<div id="div_code"></div>
+			</div>
+		</div>
+		<!-----------------------------------------最下面------------------------------------->
+		<div class="be_e">
+			<div class="be_e1">
+				<div id="d1">
+					<div id="d11">帮助中心</div>
+					<p class="p1"><a href="#">购物指南</a></p>
+					<p class="p2"><a href="#">支付方式</a></p>
+					<p class="p3"><a href="#">配送方式</a></p>
+					<p class="p4"><a href="#">交易条款</a></p>
+				</div>
+				<div id="d2">
+					<div id="d11">服务支持</div>
+					<p class="p1"><a href="#">售后服务</a></p>
+					<p class="p2"><a href="#">服务预约</a></p>
+					<p class="p3"><a href="#">进度查询</a></p>
+					<p class="p4"><a href="#">电子保单</a></p>
+				</div>
+				<div id="d3">
+					<div id="d11">关注我们</div>
+					<p class="p1"><a href="#">联系我们</a></p>
+					<p class="p2"><a href="#">官方微博</a></p>
+					<p class="p3"><a href="#">铁粉社区</a></p>
+				</div>
+				<div id="d4">
+					<div id="d11">客服服务</div>
+					<p class="p1"><a href="#">大宗采购</a></p>
+					<p class="p2"><a href="#">经销商之家</a></p>
+					<p class="p3"><a href="#">十分到家</a></p>
+				</div>
+				<div id="d5">
+					<div id="d11">应用服务</div>
+					<p class="p1"><a href="#">环网</a></p>
+					<p class="p2"><a href="#">金融</a></p>
+					<p class="p3"><a href="#">教育</a></p>
+				</div>
+				<div id="d6">
+					<p class="p1">4008-123456</p>
+					<p class="p2">(24小时在线,仅在市话费)</p>
+					<div class="div1">
+						<img src="../images/mmmm.jpg"/>
+						<span>24小时在线客服</span>
+					</div>
+				</div>
+				<script type="text/javascript">
+/*					$('.div1').hover(function(){
+						$(this).css('background','red');
+						$('.div1').find('span').css('color','white');
+						
+					},function(){
+						$('.div1').css('background','')
+						$('.div1').find('span').css('color','red');
+					})*/
+					
+				</script>
+			</div>
+		</div>
+		<!---->
+		<div class="base_r">
+			<div class="base_r1">
+				<div class="base_r11">
+					<ul>
+						<li><a href="#">关于TCL</a></li>
+						<li><a href="#">投资者关系</a></li>
+						<li><a href="#">社会责任</a></li>
+						<li><a href="#">新闻中心</a></li>
+						<li><a href="#">人才招聘</a></li>
+						<li><a href="#">成员网站</a></li>
+					</ul>
+				</div>
+				<div class="base_r12">
+					©2010-2016 TCL CORPORATION All Rights Reserved. TCL集团股份有限公司版权所有 粤ICP备05040863号 使用条款 | 法律声明 | 隐私保护
+				</div>
+				<div class="base_r13">
+					<img src="../images/hhh.jpg"/>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

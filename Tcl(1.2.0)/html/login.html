@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script type="text/javascript" src="../js/tool.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				$('#ipt1').onblur = function(){
+					var oValue = this.value.replace(/ /g,'');
+					this.value = oValue;
+					if(oValue.length == 11){
+						if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(oValue))){
+							$('#span_id').innerHTML = '✘';
+							$('#span_id').style.color = 'red';
+						}else{
+							$('#span_id').innerHTML = '✔';
+							$('#span_id').style.color = 'green';
+						}
+					}else{
+						$('#span_id').innerHTML = '✘';
+						$('#span_id').style.color = 'red';
+					}
+				}
+				$("#password").onblur = function(){
+					if(this.value.length >= 6 && this.value.length <= 18){
+						//判断密码强度
+						$("#password_span").style.color = "green";
+						if(/\d/.test(this.value) && /[a-z]/.test(this.value) && /[A-Z]/.test(this.value)){
+							$("#password_span").innerHTML = "【强】";
+						}else if(/^\d+$/.test(this.value) || /^[a-z]+$/.test(this.value) || /^[A-Z]+$/.test(this.value)){
+							$("#password_span").innerHTML = "【弱】";
+						}else{
+							$("#password_span").innerHTML = "【一般】";
+						}
+					}else{
+						$("#password_span").style.color = "red";
+						$("#password_span").innerHTML = "长度6~18位";
+					}
+				}
+				$('#ipt3').onclick = function(){
+					//alert(1)
+					var val1 = $('#ipt1').value,
+						val2 = $('#password').value;
+						if(getCookie('username') == val1 && getCookie('password') == val2){
+							alert('登录成功')
+							setTimeout(function(){
+							window.location.href='personal.html';
+							},2000)
+						}else{
+							alert('账户名或者密码错误');
+						}
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<!------------------------------------顶部--------------------------------------->
+		<div class="top">
+			<div class="top_one">
+				<div class="top_1"><img src="../images/0_1.jpg"/></div>
+				<div class="top_2">TCL账号登录</div>
+			</div>
+		</div>
+		<!--------------------------------------中部------------------------------------->
+		<div class="middle">
+			<div class="middle_one">
+				<form action="" method="get">
+					<input type="text" name="" id="ipt1" placeholder="手机号/TCl/账号"/><span id="span_id"></span><br>
+					<p></p>
+					<input type="password" name="" id="password" placeholder="密码"/><span id="password_span"></span><br>
+					<input type="button" name="" id="ipt3" value="立即登录"/>
+				</form>
+				<div class="oImg"><img src="../images/TCL_01.jpg"/></div>
+				<div class="oImg1"><img src="../images/TCL_02.jpg"/></div>
+				<div id="oDiv">
+					<ul>
+						<li id="li1"><a href="enroll.html">注册TCL账号</a></li>
+						<li><a href="#">忘记密码</a></li>
+					</ul>
+				</div>
+				<div id="bor_ma">
+					<div id="border_1"></div>
+					<div id="border_2">其他的方式登录</div>
+					<div id="border_3"></div>
+				</div>
+				<div class="sister">
+					<ul>
+						<li><a href=""><img src="../images/TCL_03.jpg"/></a></li>
+						<li><a href=""><img src="../images/TCL_04.jpg"/></a></li>
+						<li><a href=""><img src="../images/TCL_05.jpg"/></a></li>
+						<li><a href=""><img src="../images/TCL_06.jpg"/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-----------------------------------------最下面------------------------------------->
+		<div class="bottom">
+			<div class="bottom_1">
+				<div class="bottom_11">
+					<ul>
+						<li><a href="#">关于TCL</a></li>
+						<li><a href="#">社会责任</a></li>
+						<li><a href="#">投资者关系</a></li>
+						<li><a href="#">新闻中心</a></li>
+						<li><a href="#">经销商之家</a></li>
+					</ul>
+				</div>
+				<div class="bottom_12">
+					©2010-2016 TCL TCL集团股份有限公司版权所有 粤ICP备05040863号 使用条款 | 法律声明 | 隐私保护
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

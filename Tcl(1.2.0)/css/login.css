@@ -1,0 +1,39 @@
+*{padding: 0;margin: 0;list-style: none;}
+.top{height: 188px;background-color: #f0f0f0;}
+.top .top_one{width: 660px;height: 135px;margin: 0 auto;}
+.top .top_one .top_1{width: 660px;text-align: center;padding-top: 53px;}
+.top .top_one .top_2{width: 660px;text-align: center;font-size: 22px;}
+
+.middle{height: 608px;}
+.middle .middle_one{width: 660px;height: 608px; margin: 0 auto;position: relative;}
+.middle .middle_one #ipt1{width: 317px;height: 63px;font-size: 18px;margin-left:108px;margin-top: 66px;
+padding: 0 60px;}
+.middle .middle_one .oImg{position: absolute;top: 90px;left: 128px;}
+.middle .middle_one #password{width: 317px;height: 63px;font-size: 18px;margin-left:108px;margin-top: 35px;
+padding: 0 60px;}
+.middle .middle_one .oImg1{position: absolute;top: 190px;left: 126px;}
+.middle .middle_one  #ipt3{width: 444px;height: 63px;font-size: 18px;margin-left:108px;margin-top: 42px;
+padding: 0 60px;border: 0;background:red;color: white;}
+
+#oDiv{width: 444px;height: 23px;font-size: 18px;margin-left:108px;margin-top: 50px;}
+#oDiv ul li {float: left;width: 220px;text-align: center;}
+#oDiv ul #li1{border-right: 1px  solid black;}
+#oDiv ul li a{text-decoration: none;color: #000033;font-size: 12px;}
+#bor_ma{width: 444px;height:97px;font-size: 18px;margin-left:108px;margin-top: 5px;
+overflow: hidden;position: relative;}
+#bor_ma #border_1{width: 145px;height: 95px;border-bottom: 1px solid black;float: left;}
+#bor_ma #border_2{width: 145px;height: 95px;float: left;font-size: 13px;color: #999;position: absolute;
+top: 80px;left: 180px;}
+#bor_ma #border_3{width: 145px;height: 95px;border-bottom: 1px solid black;float: right;}
+
+.sister{width: 444px;height: 50px;font-size: 18px;margin-left:108px;margin-top: 25px;}
+.sister ul li{float: left;padding: 10px 38px;}
+
+.bottom{height: 180px; background: #f0f0f0;}
+.bottom .bottom_1{width: 660px;height: 180px; margin: 0 auto;border: 1px solid  #f0f0f0;}
+.bottom .bottom_1 .bottom_11 {width:660px;height: 23px;margin: 0 auto;padding-top: 70px;margin-left: 90px;}
+.bottom .bottom_1 .bottom_11 ul li{float: left;}
+.bottom .bottom_1 .bottom_11 ul li a{text-decoration: none;
+border-right: 1px solid black;padding: 0 20px;color: #666;font-size: 12px;}
+.bottom .bottom_1 .bottom_12{width: 660px;height: 30px;border: 1px solid  #f0f0f0;
+font-size: 11px;text-align:center;color:#999;line-height: 30px;}

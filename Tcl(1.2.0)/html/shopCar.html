@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/shopCar.css"/>
+		<script type="text/javascript" src="../js/cookies.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	</head>
+	<body>
+		<div id="Top">
+			<div id="Top_q">
+				<div id="d1"><img src="../images/0_1.jpg"/></div>
+				<p id="d0">我的购物车</p>
+				<div id="d2"><a href="login.html">请登录</a></div>
+				<div id="d3">我的订单</div>
+			</div>
+		</div>
+		<!-----------------------Center------------------------>
+		<div id="Center">
+		  <div id="box">
+			<ul class="header">
+				<li>商品信息</li>
+				<li>型号</li>
+				<li>数量</li>
+				<li>单价</li>
+			</ul>
+			<div id="goodsList">
+				<p id="hide"><img src="../images/cart_01.jpg"/><a href="collect.html">购物车空空的,去看看心仪的商品吧</a></p>
+			</div>
+			<p class="footer"><input type="button" id="buy" value="结算"><span>&yen;<em id="all">0<em></span></p>
+		  </div>
+		</div>
+		<script type="text/javascript">
+			var hide = document.getElementById('hide');
+			var goodsList = document.getElementById('goodsList');
+			var oAll = document.getElementById('all');
+			var all = 0;
+			var coo = cookie();
+			if(coo){
+				hide.style.display = 'none';
+				for(var key in coo){
+					var arr1 = coo[key].split('|');
+					var arr2 = [];
+					var obj = {};
+					for(var i = 0;i < arr1.length;i++){
+						arr2.push(arr1[i].split('#'));
+					}
+					for(var j = 0;j < arr2.length;j++){
+						obj[arr2[j][0]] = arr2[j][1];
+					}
+					var oDl = document.createElement('dl');
+					//创建名称
+					var oDt = document.createElement('dt');
+					var oImg = document.createElement('img');
+					oImg.src = obj.imgUrl;
+					var oText = document.createElement('span');
+					oText.innerHTML = obj.name;
+					var oA = document.createElement('a');
+					oA.href = obj.url;
+					var oCheck = document.createElement('input');
+					oCheck.type = 'checkbox';
+					oA.appendChild(oImg);
+					oA.appendChild(oText);
+					oDt.appendChild(oCheck);
+					oDt.appendChild(oA);
+					oDl.appendChild(oDt);
+					//创建型号
+					var oSize = document.createElement('dd');
+					oSize.className = 'oSize';
+					oSize.innerHTML = obj.size;
+					oDl.appendChild(oSize);
+					//创建数量
+					var oNumber = document.createElement('dd');
+					oNumber.className = 'oNumber';
+					oNumber.innerHTML = obj.number;
+					oDl.appendChild(oNumber);
+					//创建单价
+					var oPrice = document.createElement('dd');
+					oPrice.className = 'oPrice';
+					oPrice.innerHTML = obj.price;
+					oDl.appendChild(oPrice);
+					//删除按钮
+					var oDelet = document.createElement('dd');
+					oDelet.className = 'oDelet';
+					oDelet.innerHTML = '删除商品';
+					oDelet.id = obj.id + obj.size;
+					oDl.appendChild(oDelet);
+					goodsList.appendChild(oDl);
+				}
+				var oC = goodsList.getElementsByTagName('input');
+				var oP = goodsList.getElementsByClassName('oPrice');
+				var oN = goodsList.getElementsByClassName('oNumber');
+				var oD = goodsList.getElementsByClassName('oDelet');
+				for(var k = 0;k < oC.length;k++){
+					oC[k].index = k;
+					oD[k].index = k;
+					oC[k].onchange = function(){
+						var p = oP[this.index].innerHTML * oN[this.index].innerHTML;
+						if(this.checked){
+							all += p;
+						}else{
+							all -= p;
+						}
+						oAll.innerHTML = all;
+					}
+					oD[k].onclick = function(){
+						cookie('goods'+this.id,'',-1);
+						if(this.parentNode.childNodes[0].childNodes[0].checked){
+							all -= oP[this.index].innerHTML * oN[this.index].innerHTML;
+						}
+						oAll.innerHTML = all;
+						this.parentNode.style.display = 'none';
+					}
+				}
+			}
+	
+		</script>
+		<div class="be_e">
+			<div class="be_e1">
+				<div id="d1">
+					<div id="d11">帮助中心</div>
+					<p class="p1"><a href="#">购物指南</a></p>
+					<p class="p2"><a href="#">支付方式</a></p>
+					<p class="p3"><a href="#">配送方式</a></p>
+					<p class="p4"><a href="#">交易条款</a></p>
+				</div>
+				<div id="d2">
+					<div id="d11">服务支持</div>
+					<p class="p1"><a href="#">售后服务</a></p>
+					<p class="p2"><a href="#">服务预约</a></p>
+					<p class="p3"><a href="#">进度查询</a></p>
+					<p class="p4"><a href="#">电子保单</a></p>
+				</div>
+				<div id="d3">
+					<div id="d11">关注我们</div>
+					<p class="p1"><a href="#">联系我们</a></p>
+					<p class="p2"><a href="#">官方微博</a></p>
+					<p class="p3"><a href="#">铁粉社区</a></p>
+				</div>
+				<div id="d4">
+					<div id="d11">客服服务</div>
+					<p class="p1"><a href="#">大宗采购</a></p>
+					<p class="p2"><a href="#">经销商之家</a></p>
+					<p class="p3"><a href="#">十分到家</a></p>
+				</div>
+				<div id="d5">
+					<div id="d11">应用服务</div>
+					<p class="p1"><a href="#">环网</a></p>
+					<p class="p2"><a href="#">金融</a></p>
+					<p class="p3"><a href="#">教育</a></p>
+				</div>
+				<div id="d6">
+					<p class="p1">4008-123456</p>
+					<p class="p2">(24小时在线,仅在市话费)</p>
+					<div class="div1">
+						<img src="../images/mmmm.jpg"/>
+						<span>24小时在线客服</span>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$('.div1').hover(function(){
+						$(this).css('background','red');
+						$('.div1').find('span').css('color','white');
+						
+					},function(){
+						$('.div1').css('background','')
+						$('.div1').find('span').css('color','red');
+					})
+				</script>
+			</div>
+		</div>
+		<div class="base_r">
+			<div class="base_r1">
+				<div class="base_r11">
+					<ul>
+						<li><a href="#">关于TCL</a></li>
+						<li><a href="#">投资者关系</a></li>
+						<li><a href="#">社会责任</a></li>
+						<li><a href="#">新闻中心</a></li>
+						<li><a href="#">人才招聘</a></li>
+						<li><a href="#">成员网站</a></li>
+					</ul>
+				</div>
+				<div class="base_r12">
+					©2010-2016 TCL CORPORATION All Rights Reserved. TCL集团股份有限公司版权所有 粤ICP备05040863号 使用条款 | 法律声明 | 隐私保护
+				</div>
+				<div class="base_r13">
+					<img src="../images/hhh.jpg"/>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

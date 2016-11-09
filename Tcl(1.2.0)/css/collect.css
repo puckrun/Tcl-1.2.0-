@@ -1,0 +1,183 @@
+*{padding: 0;margin: 0;list-style: none;text-decoration: none;}	
+html,body{padding: 0;margin: 0;}
+ul,ul li{list-style: none;margin: 0;padding: 0;}
+.top{height: 60px;background: #fff;z-index: 999;margin: 0 auto;}
+.top .top11{width: 1008px;height:60px;background: #fff;margin: 0 auto;}
+.top .top11 .t0{width: 90px;height: 45px;float: left;}
+.top .top11 .t0 img{width: 100%;height: 100%;margin-top: 5px;}
+
+.top .top11 .t1{width: 750px;height: 60px;background: #fff;float: left;position: relative;}
+.top .top11 .t1 ul li{padding: 0 15px;float: left;line-height:60px;font-weight: 900;}
+.top .top11 .t1 ul li a {color: #000;display:block; }
+
+.top .top11 .t2{width: 165px;height: 60px;float: right;background: #fff;}
+.top .top11 .t2 ul li{float: left;line-height:60px;padding:0 15px ;}
+.t3{background: #fff;position: relative;overflow: hidden;z-index: 999;}
+.t3 .t30{width: 1008px;background: #fff;margin: 0 auto;}
+.t3 .t31 ul li {width:170px;margin-left: 20px;float: left;}
+.t3 .t31 ul li a img{width: 100%;height: 100%;}
+.t3 .t31 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t31 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+
+.t3 .t32 ul li {width:170px;margin-left: 20px;float: left;margin-top: 5px;}
+.t3 .t32 ul li a img{width: 100%;height: 100%;}
+.t3 .t32 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t32 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+
+.t3 .t33 ul li {width:170px;margin-left: 60px;float: left;}
+.t3 .t33 ul li a img{width: 100%;height: 100%;}
+.t3 .t33 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t33 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+
+.t3 .t34 ul li {width:170px;margin-left: 20px;float: left;}
+.t3 .t34 ul li a img{width: 100%;height: 100%;}
+.t3 .t34 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t34 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+
+.t3 .t35 ul li {width:170px;margin-left: 20px;float: left;}
+.t3 .t35 ul li a img{width: 100%;height: 100%;}
+.t3 .t35 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t35 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+
+.t3 .t36 ul li {width:170px;margin-left: 20px;float: left;}
+.t3 .t36 ul li a img{width: 100%;height: 100%;}
+.t3 .t36 ul li .m_tit{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.t3 .t36 ul li .red{text-align: center;font-size: 15px;font-family: "微软雅黑";}
+.active{background: indianred;border-radius: 20%;}
+/*************************************Center**********************************/
+#Center{height: 50px;background: #f0f0f0;}
+#Center #Center_01{width: 1008px;height: 50px; margin:  0 auto;
+line-height: 50px;font-family: "微软雅黑";}
+/*************************************Title**********************************/
+#Title{height: 743px;}
+#Title #Title_z{width: 1008px;height: 743px;margin:0 auto;}
+#Title #Title_z #Title_l{width: 500px;height: 743px;float: left;}
+#Title #Title_z #Title_l #L_T{width: 500px ;height: 551px;border-bottom: 1px solid black;overflow: hidden;}
+#Title #Title_z #Title_l #L_T img{width: 100%;height: 100%;}
+
+#Title #Title_z #Title_l #L_R{width: 500px ;height: 551px;text-align: center;}
+#Title #Title_z #Title_l #L_R img{width: 100%;height: 100%;}
+#Title #Title_z #Title_l #L_R ul{width: 400px;height: 80px;margin-top: 25px;
+margin-left: 60px;}
+#Title #Title_z #Title_l #L_R .lis1{border: 1px solid red;}
+#Title #Title_z #Title_l #L_R ul li{float: left;width: 60px;height: 60px;border: 1px solid #999;
+margin-left:20px;}
+.act{border: 1px solid red;}
+
+
+#Title #Title_z #Title_r{width: 500px;height: 743px;float: right;}
+#Title #Title_z #Title_r #Title_ri{width: 500px;height: 130px;border-bottom: 1px solid #999;position: relative;
+background: url(../images/jpg.jpg)no-repeat 440px 82px;}
+#Title #Title_z #Title_r #Title_ri #name{font-size: 30px;font-weight: 600;margin-top: 60px;}
+#Title #Title_z #Title_r #Title_ri #d2{font-size: 10px;color: #999;;margin-top: 18px;}
+#Title #Title_z #Title_r #Title_ri #d3{font-size: 10px;color: #999;}
+#Title #Title_z #Title_r #Title_ri #d4 a{font-size: 15px; color: #999;position: absolute;top: 80px;right: 150px;}
+#Title #Title_z #Title_r #Title_ri #d5 a{font-size: 15px; color: #999;position: absolute;top: 80px;right: 80px;}
+
+
+#Title #Title_z #Title_r #Title_ri #d6{position: absolute;top: 130px;left: 350px;width: 150px;height: 150px;display: none;}
+#Title #Title_z #Title_r #shopC{height: 41px;border-bottom: 1px solid #999;}
+#Title #Title_z #Title_r #shopC #p1{font-size: 15px;margin-top: 35px;margin-left: ;}
+#Title #Title_z #Title_r #shopC #p1 #price{font-size: 28px;color: red;}
+
+#Title #Title_z #Title_r #Color{height: 142px;border-bottom: 1px solid #999;position: relative;}
+#Title #Title_z #Title_r #Color #d1{font-size: 15px;margin-top: 20px;}
+#Title #Title_z #Title_r #Color #d2{width: 146px;height: 64px;border: 1px solid #999;text-align: center;
+line-height: 64px;position: absolute;top:72px;left: 0;}
+#Title #Title_z #Title_r #Color #d3{width: 146px;height: 64px;border: 1px solid #999;text-align: center;
+line-height: 64px;position: absolute;top:72px;left: 164px;}
+
+#Title #Title_z #Title_r #Color #size .bingo{border-color:red;}
+
+#Option_q {border-bottom: 1psx solid #999;height: 120px;position: relative;border-bottom: 1px solid #999;}
+#Option_q #number{position: absolute;top: 24px;height: 65px;text-align: center;}
+#Option_q #btn{width: 316px;height: 65px;background: red;border: 0;text-align: center;
+line-height: 65px;margin-left: 150px;margin-top:24px ;color: white;font-size: 19px;}
+
+#Title #Title_z #Title_r #Font{height: 190px;margin-top: 30px;color: #999;}
+
+#nav{height: 5000px;background: #f0f0f0;border-top: 1px solid #999;overflow: hidden;position: relative;}
+#nav #nav_q{width: 1100px;margin: 0 auto;overflow: hidden;}
+#nav #nav_q #nav_left{width: 798px;float: left;height: 5000px;overflow: hidden;background: #fff;}
+#nav #nav_q #nav_left img{width:750px;height:850px;display: block;margin-left: 20px;}
+#nav #nav_q #nav_right{width: 270px;float: right;}
+#nav #nav_q #nav_right ul li{margin-top: 30px;font-size: 20px;color: #999;}
+
+.be_low{height: 130px;background: #f0f0f0;margin-top: 10px;}
+.be_low .be_w{width: 985px;border-bottom: 1px solid #333;height: 130px;margin: 0 auto;z-index: 999;}
+.be_low .be_w ul li{float: left;padding: 0 80px;line-height: 130px;position: relative;}
+.be_low .be_w ul li span{font-size: 12px;color: #999;}
+.be_low .be_w ul li span:hover{color: red;}
+.be_low .be_w ul li img{display: block;position: absolute;top: 50px;left: 35px;}
+
+.be_e{height: 248px;background: #f0f0f0;}
+.be_e .be_e1{width: 985px;border-top: 1px solid #999;height:248px;margin: 0 auto;}
+
+.be_e .be_e1 #d1{width:100px ;height: 245px;float: left;margin-left: 20px;}
+.be_e .be_e1 #d1 #d11{font-size: 15px;font-weight: bold;margin-top: 45px;}
+.be_e .be_e1 #d1 .p1{margin-top: 16px;}
+.be_e .be_e1 #d1 .p1 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d1 .p2{margin-top: 16px;}
+.be_e .be_e1 #d1 .p2 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d1 .p3{margin-top: 16px;}
+.be_e .be_e1 #d1 .p3 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d1 .p4{margin-top: 16px;}
+.be_e .be_e1 #d1 .p4 a{color: #999;font-size: 12px;}
+
+.be_e .be_e1 #d2{width:100px ;height: 245px;float: left;margin-left: 20px;}
+.be_e .be_e1 #d2 #d11{font-size: 15px;font-weight: bold;margin-top: 45px;}
+.be_e .be_e1 #d2 .p1{margin-top: 16px;}
+.be_e .be_e1 #d2 .p1 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d2 .p2{margin-top: 16px;}
+.be_e .be_e1 #d2 .p2 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d2 .p3{margin-top: 16px;}
+.be_e .be_e1 #d2 .p3 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d2 .p4{margin-top: 16px;}
+.be_e .be_e1 #d2 .p4 a{color: #999;font-size: 12px;}
+
+.be_e .be_e1 #d3{width:100px ;height: 245px;float: left;margin-left: 20px;}
+.be_e .be_e1 #d3 #d11{font-size: 15px;font-weight: bold;margin-top: 45px;}
+.be_e .be_e1 #d3 .p1{margin-top: 16px;}
+.be_e .be_e1 #d3 .p1 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d3 .p2{margin-top: 16px;}
+.be_e .be_e1 #d3 .p2 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d3 .p3{margin-top: 16px;}
+.be_e .be_e1 #d3 .p3 a{color: #999;font-size: 12px;}
+
+.be_e .be_e1 #d4{width:100px ;height: 245px;float: left;margin-left: 20px;}
+.be_e .be_e1 #d4 #d11{font-size: 15px;font-weight: bold;margin-top: 45px;}
+.be_e .be_e1 #d4 .p1{margin-top: 16px;}
+.be_e .be_e1 #d4 .p1 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d4 .p2{margin-top: 16px;}
+.be_e .be_e1 #d4 .p2 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d4 .p3{margin-top: 16px;}
+.be_e .be_e1 #d4 .p3 a{color: #999;font-size: 12px;}
+
+.be_e .be_e1 #d5{width:100px ;height: 245px;;float: left;margin-left: 20px;}
+.be_e .be_e1 #d5 #d11{font-size: 15px;font-weight: bold;margin-top: 45px;}
+.be_e .be_e1 #d5 .p1{margin-top: 16px;}
+.be_e .be_e1 #d5 .p1 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d5 .p2{margin-top: 16px;}
+.be_e .be_e1 #d5 .p2 a{color: #999;font-size: 12px;}
+.be_e .be_e1 #d5 .p3{margin-top: 16px;}
+.be_e .be_e1 #d5 .p3 a{color: #999;font-size: 12px;}
+
+.be_e .be_e1 #d6{width: 300px;height: 245px;float: right;position: relative;}
+.be_e .be_e1 #d6 .p1{font-size:30px;color: red;margin-top: 47px;text-align: center;}
+.be_e .be_e1 #d6 .p2{font-size:15px; color: #999;margin-top: 15px;text-align: center;}
+.be_e .be_e1 #d6 .div1{position: absolute;border: 1px solid red;width: 150px;left: 70px;top: 130px;height: 28px;}
+.be_e .be_e1 #d6 .div1 span{color: red;margin-left: 30px;line-height: 28px;}
+.be_e .be_e1 #d6 .div1 img{position: absolute;}
+
+.base_r{height: 100px;background: #e3e3e3;}
+.base_r .base_r1{width: 985px;height:100px;margin: 0 auto;position: relative;}
+.base_r .base_r1 .base_r11 ul li{height: 20px;float: left;font-size: 10px;text-align: center;
+line-height: 20px;margin-top: 30px;}
+.base_r .base_r1 .base_r11 ul li a{padding: 0 15px;color: #000033;border-right: 1px solid #000033;}
+.base_r .base_r1 .base_r12{width: 985px;height: 20px;padding-top: 15px;clear: both;font-size: 12px;
+color: #999;padding-left: 15px;}
+.base_r .base_r1 .base_r13{position: absolute;top: 60px;right: 15px;}
+.base_r .base_r1 .base_r13 {font-size: 12px;position: absolute;}
+
+ #goTop{position:fixed;right:20px;bottom:100px;width:46px;height:100px;color:red;z-index: 999;
+ display: none;}
